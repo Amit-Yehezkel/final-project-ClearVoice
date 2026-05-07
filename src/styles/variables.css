@@ -1,0 +1,63 @@
+:root {
+  --primary-dark: #3a2017;
+  --primary: #9a3f12;
+  --primary-light: #d85a0c;
+  --accent: #f0781f;
+  --accent-soft: #ffe0c6;
+
+  --button-gradient: linear-gradient(135deg, #a94312 0%, #d85a0c 52%, #f06a13 100%);
+  --button-gradient-hover: linear-gradient(135deg, #94370c 0%, #c84f07 52%, #e45d0c 100%);
+
+  --usage-gradient: linear-gradient(135deg, #8f3f18 0%, #b84e19 52%, #d85a0c 100%);
+  --usage-gradient-hover: linear-gradient(135deg, #7a3212 0%, #a94312 52%, #c84f07 100%);
+
+  --learning-gradient: linear-gradient(135deg, #8f3f18 0%, #b84e19 55%, #d45a14 100%);
+  --learning-gradient-hover: linear-gradient(135deg, #7a3212 0%, #a94312 55%, #c84f07 100%);
+
+  --bg-main: #fff8f2;
+  --text-main: #2f160f;
+  --text-muted: #8a5f4e;
+
+  --footer-cream: #ffe0c6;
+
+  --border: #ead8cf;
+  --border-strong: #dfc0b0;
+
+  --shadow: 0 22px 54px rgba(84, 38, 17, 0.12);
+  --soft-shadow: 0 12px 30px rgba(84, 38, 17, 0.08);
+  --button-shadow: 0 12px 24px rgba(214, 86, 14, 0.26);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Calibri, Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}

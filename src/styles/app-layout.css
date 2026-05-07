@@ -1,0 +1,132 @@
+.app,
+.home-app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(240, 120, 31, 0.13), transparent 30%),
+    radial-gradient(circle at 16% 82%, rgba(240, 120, 31, 0.08), transparent 26%),
+    linear-gradient(180deg, #fffaf6 0%, #fff3ea 100%);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(223, 192, 176, 0.55);
+  box-shadow: 0 5px 20px rgba(84, 38, 17, 0.035);
+}
+
+.header-inner {
+  width: 100%;
+  min-height: 92px;
+  padding: 0 max(34px, calc((100vw - 1180px) / 2));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-wordmark {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-button {
+  border: none;
+  background: transparent;
+  color: #2f160f;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0;
+  height: auto;
+  border-radius: 999px;
+  transition: 0.18s ease;
+  box-shadow: none;
+  text-shadow: 0 0 0 currentColor;
+}
+
+.nav-button:hover {
+  color: #8a3f2a;
+  background: transparent;
+}
+
+.nav-button.active {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: #f3e2d8;
+  color: #8a3f2a;
+  padding: 9px 20px;
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button.active:hover {
+  background: #efdbd0;
+  color: #8a3f2a;
+}
+
+.page {
+  min-height: calc(100vh - 92px);
+  padding: 48px 24px 72px;
+}
+
+.page-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.page-top {
+  max-width: 780px;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(240, 120, 31, 0.12);
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+
+.section-description {
+  margin: 14px 0 0;
+  font-size: 20px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}

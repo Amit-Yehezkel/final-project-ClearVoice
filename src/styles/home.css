@@ -1,0 +1,206 @@
+.home-main {
+  min-height: calc(100vh - 92px);
+  display: grid;
+  place-items: center;
+  padding: 62px 24px 86px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(58, 32, 23, 0.016) 0 2px,
+      transparent 2px 34px
+    );
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.home-main::after {
+  content: "";
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  border-radius: 50%;
+  background: rgba(240, 120, 31, 0.055);
+  filter: blur(34px);
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.home-choice-section {
+  position: relative;
+  z-index: 2;
+  width: min(980px, 100%);
+  text-align: center;
+}
+
+.home-choice-section::before,
+.home-choice-section::after {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 96px;
+  top: 58%;
+  transform: translateY(-50%);
+  opacity: 0.34;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, rgba(240, 120, 31, 0.14) 2px, transparent 3px) 0 50% / 18px 18px repeat-x;
+}
+
+.home-choice-section::before {
+  right: -210px;
+}
+
+.home-choice-section::after {
+  left: -210px;
+}
+
+.home-choice-heading h1 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1.12;
+  color: var(--primary-dark);
+  font-weight: 900;
+  letter-spacing: -0.4px;
+}
+
+.home-choice-heading p {
+  margin: 16px auto 0;
+  max-width: 680px;
+  color: var(--text-muted);
+  font-size: 21px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.home-mode-wrapper {
+  width: min(720px, 100%);
+  margin: 54px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+.home-mode-card {
+  min-height: 260px;
+  border: none;
+  border-radius: 30px;
+  padding: 34px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s ease;
+  font-family: inherit;
+  text-align: center;
+}
+
+.home-mode-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -18% -20% -18%;
+  height: 92px;
+  opacity: 0.52;
+  pointer-events: none;
+  background:
+    repeating-radial-gradient(
+      ellipse at center,
+      transparent 0 12px,
+      rgba(255, 255, 255, 0.22) 13px 14px,
+      transparent 15px 22px
+    );
+}
+
+.home-mode-card:hover {
+  transform: translateY(-6px);
+}
+
+.home-mode-card-light {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 244, 235, 0.9));
+  border: 1px solid rgba(240, 120, 31, 0.42);
+  box-shadow: 0 22px 48px rgba(84, 38, 17, 0.12);
+}
+
+.home-mode-card-light:hover {
+  border-color: rgba(240, 120, 31, 0.72);
+  box-shadow: 0 26px 58px rgba(214, 86, 14, 0.18);
+}
+
+.home-mode-card-dark {
+  background:
+    radial-gradient(circle at 50% 24%, rgba(255, 167, 92, 0.22), transparent 34%),
+    linear-gradient(145deg, #b8511d 0%, #8f3f18 52%, #5a2816 100%);
+  border: 1px solid rgba(255, 224, 198, 0.22);
+  box-shadow: 0 24px 54px rgba(143, 63, 24, 0.28);
+}
+
+.home-mode-card-dark:hover {
+  box-shadow: 0 28px 64px rgba(143, 63, 24, 0.34);
+}
+
+.home-mode-icon {
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.home-mode-card-light .home-mode-icon {
+  background: rgba(255, 244, 235, 0.72);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.72),
+    0 16px 32px rgba(84, 38, 17, 0.12);
+}
+
+.home-mode-card-dark .home-mode-icon {
+  background: rgba(255, 224, 198, 0.11);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 224, 198, 0.22),
+    0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.home-mode-icon img {
+  width: 98px;
+  height: 98px;
+  object-fit: contain;
+}
+
+.home-mode-mic {
+  color: #ffe0c6;
+  font-size: 66px;
+  text-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+.home-mode-card h2 {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 31px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.home-mode-card-light h2 {
+  color: var(--primary-dark);
+}
+
+.home-mode-card-dark h2 {
+  color: #fff8f2;
+}
